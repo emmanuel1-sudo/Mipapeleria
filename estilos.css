@@ -1,0 +1,276 @@
+:root{
+    --primario:#1B3A7A;
+    --acento: #C0186A;
+    --tercero: #7030A0;
+    --fondo: #F4F6FA;
+    --blanco: #FFFFFF;
+    --gris: #6B7280;
+    --borde: #D9DEE8;
+    --verde: #16845B;
+    --rojo: #C62828;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: var(--fondo);
+    color: var(--texto);
+}
+
+.navbar{
+    background: var(--primario);
+    color: white;
+    padding: 18px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.logo{
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.navbar nav{
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.navbar nav a{
+    color: white;
+    text-decoration: none;
+    padding: 9px 13px;
+    border-radius: 6px;
+    transition: 0.2s;
+}
+
+.navbar nav a:hover{
+    background: var(--tercero);
+}
+
+.contenedor{
+   width: 90%;
+   max-width: 1100px;
+   margin: 35px auto;
+}
+
+.inicio {
+  text-align: center;
+}
+
+.inicio h1 {
+    color: var(--primario);
+    font-size: 35px;
+}
+
+.inicio p {
+    color: var(--gris);
+}
+
+.tarjetas {
+    margin-top: 35px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 20px;
+}
+
+.tarjeta {
+    background: var(--blanco);
+    padding: 28px 20px;
+    border: 2px solid var(--borde);
+    border-top: 5px solid var(--tercero);
+    border-radius: 10px;
+    text-decoration: none;
+    color: var(--texto);
+    transition: 0.2s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-4px);
+    border-color: var(--tercero);
+}
+
+.tarjeta span {
+    font-size: 38px;
+}
+
+.tarjeta h2 {
+    color: var(--primario);
+}
+
+
+.titulo {
+    color: var(--primario);
+    margin-bottom: 20px;
+}
+
+
+.btn {
+    display: inline-block;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 6px;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: bold;
+    margin: 3px;
+}
+
+.btn-acento {
+    background: var(--acento);
+    color: white;
+}
+
+.btn-acento:hover {
+    opacity: 0.85;
+}
+
+.btn-tercero {
+    background: var(--tercero);
+    color: white;
+}
+
+.btn-ver {
+    background: var(--primario);
+    color: white;
+}
+
+.btn-editar {
+    background: var(--tercero);
+    color: white;
+}
+
+.btn-eliminar {
+    background: var(--rojo);
+    color: white;
+}
+
+
+.tabla-contenedor {
+    overflow-x: auto;
+    background: white;
+    border-radius: 10px;
+    border: 1px solid var(--borde);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    background: var(--primario);
+    color: white;
+    padding: 13px;
+    text-align: left;
+}
+
+td {
+    padding: 12px;
+    border-bottom: 1px solid var(--borde);
+}
+
+tr:hover td {
+    background: #f7f5fa;
+}
+
+/* FORMULARIOS */
+
+.formulario {
+    background: white;
+    max-width: 650px;
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid var(--borde);
+    border-left: 5px solid var(--tercero);
+}
+
+.campo {
+    margin-bottom: 17px;
+}
+
+.campo label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: var(--primario);
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #BCC4D0;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+.campo textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+    outline: none;
+    border: 2px solid var(--acento);
+}
+
+
+.mensaje {
+    padding: 13px 16px;
+    margin-bottom: 20px;
+    border-radius: 7px;
+    font-weight: bold;
+}
+
+.exito {
+    background: #DDF5EA;
+    color: #11623F;
+    border: 1px solid #8DD3B2;
+}
+
+.error {
+    background: #FCE4E4;
+    color: #8E1C1C;
+    border: 1px solid #E7A1A1;
+}
+
+
+footer {
+    margin-top: 60px;
+    background: var(--tercero);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+
+@media (max-width: 700px) {
+
+    .navbar {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .navbar nav {
+        justify-content: center;
+    }
+
+    .contenedor {
+        width: 94%;
+    }
+
+    .inicio h1 {
+        font-size: 28px;
+    }
+}
